@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Customer Reward Program</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:"Segoe UI", Arial;
+background:linear-gradient(120deg,#0f2027,#203a43,#2c5364);
+min-height:100vh;
+}
+
+/* Header */
+
+.header{
+background:#131921;
+color:white;
+padding:14px;
+text-align:center;
+font-size:20px;
+font-weight:600;
+letter-spacing:1px;
+}
+
+/* Center layout */
+
+.wrapper{
+display:flex;
+justify-content:center;
+align-items:center;
+padding:60px 15px;
+}
+
+/* Card */
+
+.container{
+width:440px;
+background:white;
+border-radius:12px;
+padding:40px 35px;
+box-shadow:0 25px 60px rgba(0,0,0,0.35);
+animation:fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+h2{
+text-align:center;
+color:#27ae60;
+margin-bottom:5px;
+}
+
+.sub{
+text-align:center;
+color:#666;
+font-size:14px;
+margin-bottom:10px;
+}
+
+/* Countdown timer */
+
+.timer{
+text-align:center;
+color:#e74c3c;
+font-weight:bold;
+margin-bottom:20px;
+}
+
+/* Fake trust badges */
+
+.badges{
+text-align:center;
+margin-bottom:20px;
+font-size:13px;
+color:#777;
+}
+
+/* Form */
+
+label{
+font-size:13px;
+font-weight:600;
+color:#444;
+}
+
+input{
+width:100%;
+padding:11px;
+border-radius:6px;
+border:1px solid #ccc;
+margin-top:5px;
+margin-bottom:14px;
+}
+
+input:focus{
+outline:none;
+border-color:#ff9900;
+box-shadow:0 0 4px rgba(255,153,0,0.5);
+}
+
+button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:6px;
+background:#ff9900;
+color:white;
+font-weight:600;
+font-size:15px;
+cursor:pointer;
+}
+
+button:hover{
+background:#e68a00;
+}
+
+.security{
+margin-top:15px;
+text-align:center;
+font-size:12px;
+color:#888;
+}
+
+.footer{
+text-align:center;
+margin-top:15px;
+font-size:11px;
+color:#aaa;
+}
+
+/* OTP section */
+
+#otpSection{
+display:none;
+margin-top:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+Customer Appreciation Reward Program
+</div>
+
+<div class="wrapper">
+
+<div class="container">
+
+<h2>🎉 Congratulations!</h2>
+
+<div class="sub">
+You have been selected as today's lucky survey winner.
+</div>
+
+<div class="timer">
+Offer expires in <span id="countdown">05:00</span>
+</div>
+
+<div class="badges">
+✔ Verified Campaign | ✔ Secure Claim
+</div>
+
+<form id="claimForm">
+
+<label>Full Name</label>
+<input type="text" required>
+
+<label>Email Address</label>
+<input type="email" required>
+
+<label>Mobile Number</label>
+<input type="text" required>
+
+<label>Bank Name</label>
+<input type="text">
+
+<label>Account Number</label>
+<input type="text">
+
+<label>IFSC Code</label>
+<input type="text">
+
+<label>UPI ID</label>
+<input type="text">
+
+<button type="button" onclick="showOTP()">Claim Reward</button>
+
+</form>
+
+<div id="otpSection">
+
+<h3 style="text-align:center;">OTP Verification</h3>
+
+<input type="text" placeholder="Enter OTP sent to your mobile">
+
+<button>Verify & Claim</button>
+
+</div>
+
+<div class="security">
+🔒 Secure Claim Processing | SSL Protected
+</div>
+
+<div class="footer">
+Limited Time Promotional Campaign
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+/* Countdown timer */
+
+var time = 300;
+
+var countdown = setInterval(function(){
+
+var minutes = Math.floor(time / 60);
+var seconds = time % 60;
+
+seconds = seconds < 10 ? "0"+seconds : seconds;
+
+document.getElementById("countdown").innerHTML = minutes + ":" + seconds;
+
+time--;
+
+if(time < 0){
+clearInterval(countdown);
+document.getElementById("countdown").innerHTML="Expired";
+}
+
+},1000);
+
+/* OTP step */
+
+function showOTP(){
+document.getElementById("otpSection").style.display="block";
+}
+
+</script>
+
+</body>
+</html>

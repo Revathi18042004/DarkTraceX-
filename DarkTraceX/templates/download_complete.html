@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Download Started | EduSecureX</title>
+    <style>
+        body {
+            /* High-tech blue background matching your dashboard screenshot */
+            background: linear-gradient(rgba(10, 24, 50, 0.9), rgba(30, 60, 114, 0.85)), 
+                        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: white;
+            text-align: center;
+        }
+
+        /* Glassmorphism box container */
+        .box {
+            width: 420px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            padding: 50px 40px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Scanning effect animation */
+        .box::after {
+            content: "";
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(255, 75, 43, 0), rgba(255, 75, 43, 0.1), rgba(255, 75, 43, 0));
+            animation: scan 3s infinite linear;
+        }
+
+        @keyframes scan {
+            0% { top: -100%; }
+            100% { top: 100%; }
+        }
+
+        .icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+            display: inline-block;
+            filter: drop-shadow(0 0 15px rgba(230, 126, 34, 0.4));
+        }
+
+        h2 {
+            color: #ffffff;
+            font-size: 26px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 800;
+        }
+
+        p {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            margin-bottom: 5px;
+        }
+
+        /* The signature red-orange gradient button from your homepage */
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 35px;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(255, 65, 108, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(255, 75, 43, 0.6);
+            filter: brightness(1.1);
+        }
+
+        .security-status {
+            margin-top: 25px;
+            font-size: 10px;
+            color: #00d4ff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <div class="icon">⬇️</div>
+    <h2>Download Started</h2>
+    <p>Your resource is being prepared.</p>
+
+    <a href="/">🏠 Back to Dashboard</a>
+</div>
+
+</body>
+</html>
